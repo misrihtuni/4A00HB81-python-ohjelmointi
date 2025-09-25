@@ -49,12 +49,12 @@ print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia " \
 driven_distance = float(input("Anna vuotuinen ajomatka (km): "))
 price_gas = float(input("Anna bensiinin litrahinta (€/l): "))
 price_diesel = float(input("Anna dielesin litrahinta (€/l): "))
-consumption_gas = float(input("Anna bensiiniauton kulutus (l/100km): "))
-consumption_diesel = float(input("Anna dieselauton kulutus (l/100km): "))
+consumption_gas_100km = float(input("Anna bensiiniauton kulutus (l/100km): "))
+consumption_diesel_100km = float(input("Anna dieselauton kulutus (l/100km): "))
 tax_diesel = float(input("Dieselveron määrä (€/vuosi): "))
 
-expenses_gas = driven_distance * consumption_gas * price_gas
-expenses_diesel = driven_distance * consumption_diesel * price_diesel + tax_diesel
+expenses_gas = driven_distance * (consumption_gas_100km / 100) * price_gas
+expenses_diesel = driven_distance * (consumption_diesel_100km / 100) * price_diesel + tax_diesel
 
 print(f"Bensiiniauton vuotuiset matkakulut ovat {round(expenses_gas, 2)} €.")
 print(f"Dieselauton vuotuiset matkakulut ovat {round(expenses_diesel, 2)} €.")

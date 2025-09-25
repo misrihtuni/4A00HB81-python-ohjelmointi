@@ -59,8 +59,8 @@ def read_float_input(prompt):
 #
 # Huomaa, että laskettua arvoa ei ole pakko tallentaa muuttujaan ennen sen
 # palauttamista! Tässä on vain esitelty toinen tapa tietojen käsittelyyn.
-def calculate_fuel_expenses(distance, fuel_consumption, fuel_price):
-    expenses = distance * fuel_consumption * fuel_price
+def calculate_fuel_expenses(distance, fuel_consumption_100km, fuel_price):
+    expenses = distance * (fuel_consumption_100km / 100) * fuel_price
     return expenses
 
 print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia " \
@@ -74,13 +74,13 @@ print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia " \
 driven_distance = read_float_input("Anna vuotuinen ajomatka (km)")
 price_gas = read_float_input("Anna bensiinin litrahinta (€/l)")
 price_diesel = read_float_input("Anna dielesin litrahinta (€/l)")
-consumption_gas = read_float_input("Anna bensiiniauton kulutus (l/100km)")
-consumption_diesel = read_float_input("Anna dieselauton kulutus (l/100km)")
+consumption_gas_100km = read_float_input("Anna bensiiniauton kulutus (l/100km)")
+consumption_diesel_100km = read_float_input("Anna dieselauton kulutus (l/100km)")
 tax_diesel = read_float_input("Dieselveron määrä (€/vuosi)")
 
 # Voimme laskea kulutukset helposti calculate_fuel_expenses-aliohjelman avulla:
-expenses_gas = calculate_fuel_expenses(driven_distance, consumption_gas, price_gas)
-expenses_diesel = calculate_fuel_expenses(driven_distance, consumption_diesel, price_diesel) + tax_diesel
+expenses_gas = calculate_fuel_expenses(driven_distance, consumption_gas_100km, price_gas)
+expenses_diesel = calculate_fuel_expenses(driven_distance, consumption_diesel_100km, price_diesel) + tax_diesel
 
 # Formatoinnin kanssa oli perustehtävän puolella hieman haasteita silloin, kun
 # tuloksena on tasaluku. Tällöin toinen desimaalinollista jäi pois. Tämä
