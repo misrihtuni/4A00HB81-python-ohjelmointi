@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-12
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -33,7 +36,9 @@
 ###############################################################################
 
 arvonimi = "Raivokkaan Asiallinen, Utelias Näkemykselline Onnistuja"
-print(f"Sudenpentukenraaliarvonimesi on: {arvonimi[0]}.{arvonimi[11]}.{arvonimi[23]}.{arvonimi[31]}.{arvonimi[46]}.")
+print(
+    f"Sudenpentukenraaliarvonimesi on: {arvonimi[0]}.{arvonimi[11]}.{arvonimi[23]}.{arvonimi[31]}.{arvonimi[46]}."
+)
 
 # Generaattori, jolla pystyy luomaan sudenpentukenraaliarvonimen mistä tahansa
 # selityksestä, löytyy tiedostosta KT02_lisa.py.

@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-12
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -43,6 +46,7 @@
 #
 ###############################################################################
 
+
 # Tämä aliohjelma ottaa vastaan parametrina promptin, joka tulostetaan
 # konsoliin käyttäjälle nähtäväksi (esim. "Anna vuotuinen ajomatka"), muuttaa
 # käyttäjältä saadun merkkijonon liukuluvuksi ja palauttaa sen.
@@ -52,6 +56,7 @@
 # tarvitse tallentaa muuttujaan ennen sen palauttamista.
 def read_float_input(prompt):
     return float(input(f"{prompt}: "))
+
 
 # Aliohjelma laskee polttoaineen kustannukset kolmen arvon pohjalta: ajettu
 # matka (km), kulutus (l/100km) ja polttoaineen hinta (€/l) ja tallentaa sen
@@ -63,8 +68,8 @@ def calculate_fuel_expenses(distance, fuel_consumption_100km, fuel_price):
     expenses = distance * (fuel_consumption_100km / 100) * fuel_price
     return expenses
 
-print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia " \
-      "matkakuluja.")
+
+print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia matkakuluja.")
 
 # Nyt tietoja kysyttäessä voidaan käyttää luomaamme read_float_input-aliohjelmaa.
 # Tämä helpottaa toiminnan muuttamista tarvittaessa.
@@ -79,8 +84,14 @@ consumption_diesel_100km = read_float_input("Anna dieselauton kulutus (l/100km)"
 tax_diesel = read_float_input("Dieselveron määrä (€/vuosi)")
 
 # Voimme laskea kulutukset helposti calculate_fuel_expenses-aliohjelman avulla:
-expenses_gas = calculate_fuel_expenses(driven_distance, consumption_gas_100km, price_gas)
-expenses_diesel = calculate_fuel_expenses(driven_distance, consumption_diesel_100km, price_diesel) + tax_diesel
+expenses_gas = calculate_fuel_expenses(
+    driven_distance, consumption_gas_100km, price_gas
+)
+expenses_diesel = (
+    calculate_fuel_expenses(driven_distance, consumption_diesel_100km, price_diesel)
+    + tax_diesel
+)
+
 
 # Formatoinnin kanssa oli perustehtävän puolella hieman haasteita silloin, kun
 # tuloksena on tasaluku. Tällöin toinen desimaalinollista jäi pois. Tämä
@@ -90,12 +101,16 @@ expenses_diesel = calculate_fuel_expenses(driven_distance, consumption_diesel_10
 print(f"Bensiiniauton vuotuiset matkakulut ovat {expenses_gas:.2f} €.")
 print(f"Dieselauton vuotuiset matkakulut ovat {expenses_diesel:.2f} €.")
 
-if (expenses_gas < expenses_diesel):
+if expenses_gas < expenses_diesel:
     # Huomaa, että formatointi toimii myös laskutoimituksissa, kun
     # laskutoimitus laitetaan sulkeisiin.
-    print(f"Bensiiniauton vuotuiset matkakulut ovat {(expenses_diesel - expenses_gas):.2f} € halvemmat.")
-elif (expenses_diesel < expenses_gas):
-    print(f"Dieselauton vuotuiset matkakulut ovat {(expenses_gas - expenses_diesel):.2f} € halvemmat.")
+    print(
+        f"Bensiiniauton vuotuiset matkakulut ovat {(expenses_diesel - expenses_gas):.2f} € halvemmat."
+    )
+elif expenses_diesel < expenses_gas:
+    print(
+        f"Dieselauton vuotuiset matkakulut ovat {(expenses_gas - expenses_diesel):.2f} € halvemmat."
+    )
 else:
     print("Molempien autojen vuotuiset matkakulut ovat yhtä suuret.")
 

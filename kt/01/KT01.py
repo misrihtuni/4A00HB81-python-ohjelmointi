@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-12
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -41,7 +44,10 @@ lemmikki_laji = input("Anna lemmikkisi laji (esim. marsu, koira, tms.): ")
 lemmikki_nimi = input("Anna lemmikkisi nimi: ")
 lemmikki_tekeminen = input("Kerro, mitä lemmikkisi teki: ")
 
-print(f"{aloitus}, {opettaja}, en tiedä mihin se {tehtava_tyyppi} oikein joutui. Lemmikki{lemmikki_laji}ni {lemmikki_nimi} varmaankin {lemmikki_tekeminen} sen!")
+print(
+    f"{aloitus}, {opettaja}, en tiedä mihin se {tehtava_tyyppi} oikein joutui. Lemmikki{lemmikki_laji}ni "
+    f"{lemmikki_nimi} varmaankin {lemmikki_tekeminen} sen!"
+)
 
 ###############################################################################
 # EOF

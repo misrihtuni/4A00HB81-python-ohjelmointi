@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-18
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -57,6 +60,7 @@
 #
 ###############################################################################
 
+
 # Tämä funktio muuntaa annetun asteluvun lähtöyksiköstä tavoiteyksikköön ja
 # palauttaa saadun asteluvun. Asteluku (degrees) on liukuluku, lähtö- ja
 # tavoiteyksiköt (unit_from ja unit_to) ovat merkkijonoja. Paluuarvo on
@@ -67,36 +71,37 @@ def convert_temperature(degrees, unit_from, unit_to):
 
     # Tarkistetaan, ovatko lähtö- ja määräyksiköt samat. Mikäli näin on,
     # palautetaan alkuperäinen arvo ilman muunnosta.
-    if (unit_from == unit_to):
+    if unit_from == unit_to:
         return degrees
 
     # Muunnetaan annettu astemäärä Celsius-asteiksi.
-    if (unit_from == "c"):
+    if unit_from == "c":
         # C -> C: arvo ei muutu
         temp_c = degrees
-    elif (unit_from == "k"):
+    elif unit_from == "k":
         # K -> C: tC = tK - 273.15
         temp_c = degrees - 273.15
-    elif (unit_from == "f"):
+    elif unit_from == "f":
         # F -> C: tC = 5/9 * (tF - 32)
-        temp_c = 5/9 * (degrees - 32)
+        temp_c = 5 / 9 * (degrees - 32)
     else:
         print(f"Tuntematon yksikkö: {unit_from}")
 
     # Muunnetaan Celcius-asteet annettuun yksikköön.
-    if (unit_to == "c"):
+    if unit_to == "c":
         # C -> C: arvo ei muutu
         temp_out = temp_c
-    elif (unit_to == "k"):
+    elif unit_to == "k":
         # C -> K: tK = tC + 273.15
         temp_out = temp_c + 273.15
-    elif (unit_to == "f"):
+    elif unit_to == "f":
         # C -> F: tF = 9/5 * tC + 32
-        temp_out = 9/5 * temp_c + 32
+        temp_out = 9 / 5 * temp_c + 32
     else:
         print(f"Tuntematon yksikkö: {unit_to}")
 
     return temp_out
+
 
 ###############################################################################
 # EOF

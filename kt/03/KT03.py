@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-12
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -43,8 +46,7 @@
 #
 ###############################################################################
 
-print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia " \
-      "matkakuluja.")
+print("Tämä ohjelma vertailee bensiini- ja dieselmoottoriauton vuotuisia matkakuluja.")
 
 driven_distance = float(input("Anna vuotuinen ajomatka (km): "))
 price_gas = float(input("Anna bensiinin litrahinta (€/l): "))
@@ -54,15 +56,21 @@ consumption_diesel_100km = float(input("Anna dieselauton kulutus (l/100km): "))
 tax_diesel = float(input("Dieselveron määrä (€/vuosi): "))
 
 expenses_gas = driven_distance * (consumption_gas_100km / 100) * price_gas
-expenses_diesel = driven_distance * (consumption_diesel_100km / 100) * price_diesel + tax_diesel
+expenses_diesel = (
+    driven_distance * (consumption_diesel_100km / 100) * price_diesel + tax_diesel
+)
 
 print(f"Bensiiniauton vuotuiset matkakulut ovat {round(expenses_gas, 2)} €.")
 print(f"Dieselauton vuotuiset matkakulut ovat {round(expenses_diesel, 2)} €.")
 
-if (expenses_gas < expenses_diesel):
-    print(f"Bensiiniauton vuotuiset matkakulut ovat {round(expenses_diesel - expenses_gas, 2)} € halvemmat.")
-elif (expenses_diesel < expenses_gas):
-    print(f"Dieselauton vuotuiset matkakulut ovat {round(expenses_gas - expenses_diesel, 2)} € halvemmat.")
+if expenses_gas < expenses_diesel:
+    print(
+        f"Bensiiniauton vuotuiset matkakulut ovat {round(expenses_diesel - expenses_gas, 2)} € halvemmat."
+    )
+elif expenses_diesel < expenses_gas:
+    print(
+        f"Dieselauton vuotuiset matkakulut ovat {round(expenses_gas - expenses_diesel, 2)} € halvemmat."
+    )
 else:
     print("Molempien autojen vuotuiset matkakulut ovat yhtä suuret.")
 

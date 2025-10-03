@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-18
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -45,11 +48,11 @@ distance = float(input("Hypyn pituus: "))
 # (constants) minimin ja maksimin asettamiseksi. Tämä parantaisi koodin
 # luettavuutta (ks. KT04_while_lisa.py).
 i = 1
-while (i <= 5):
+while i <= 5:
     # Kysytään käyttäjältä tuomarin i antamat pisteet ja sisätään ne
     # pistekertymään.
     style_points_total += float(input(f"Tuomarin {i} pisteet: "))
-    i += 1 # Muista kasvattaa askeltajaa!
+    i += 1  # Muista kasvattaa askeltajaa!
 
 # Lasketaan yhteispisteet ja tulostetaan tulos näytölle.
 points_total = style_points_total + 0.9 * distance

@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-09-18
 #
+# Muokkaukset
+# 2025-10-03: Tyyli päivitetty (PEP 8 compliant)
+#
 ###############################################################################
 
 # Tässä tuomareiden lukumäärä on tallennettu kiintoarvoon.
@@ -15,7 +18,7 @@ style_points_total = 0
 distance = float(input("Hypyn pituus: "))
 
 i = 1
-while (i <= COUNT_JUDGES): # Huomaa, että koodia on nyt helpompi ymmärtää.
+while i <= COUNT_JUDGES:  # Huomaa, että koodia on nyt helpompi ymmärtää.
     style_points_total += float(input(f"Tuomarin {i} pisteet: "))
     i += 1
 
