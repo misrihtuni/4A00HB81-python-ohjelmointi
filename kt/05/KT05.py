@@ -25,9 +25,9 @@
 # | degrees   | lämpötila asteina (desimaaliluku)                             |
 # +-----------+---------------------------------------------------------------+
 # | unit_from | missä yksikössä annettu lämpötila on (merkkijono)             |
-# |           | f – Fahrehheit                                                |
-# |           | c – Celcius                                                   |
-# |           | k – Kelvin                                                    |
+# |           | f - Fahrehheit                                                |
+# |           | c - Celcius                                                   |
+# |           | k - Kelvin                                                    |
 # +-----------+---------------------------------------------------------------+
 # | unit_to   | mihin yksikköön annettu lämpötila muunnetaan (merkkijono,     |
 # |           | sama kuin yllä)                                               |

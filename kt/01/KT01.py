@@ -45,8 +45,9 @@ lemmikki_nimi = input("Anna lemmikkisi nimi: ")
 lemmikki_tekeminen = input("Kerro, mitä lemmikkisi teki: ")
 
 print(
-    f"{aloitus}, {opettaja}, en tiedä mihin se {tehtava_tyyppi} oikein joutui. Lemmikki{lemmikki_laji}ni "
-    f"{lemmikki_nimi} varmaankin {lemmikki_tekeminen} sen!"
+    f"{aloitus}, {opettaja}, en tiedä mihin se {tehtava_tyyppi} oikein joutui. "
+    f"Lemmikki{lemmikki_laji}ni {lemmikki_nimi} varmaankin {lemmikki_tekeminen} "
+    f"sen!"
 )
 
 ###############################################################################

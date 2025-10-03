@@ -37,7 +37,8 @@
 
 arvonimi = "Raivokkaan Asiallinen, Utelias Näkemykselline Onnistuja"
 print(
-    f"Sudenpentukenraaliarvonimesi on: {arvonimi[0]}.{arvonimi[11]}.{arvonimi[23]}.{arvonimi[31]}.{arvonimi[46]}."
+    f"Sudenpentukenraaliarvonimesi on: "
+    f"{arvonimi[0]}.{arvonimi[11]}.{arvonimi[23]}.{arvonimi[31]}.{arvonimi[46]}."
 )
 
 # Generaattori, jolla pystyy luomaan sudenpentukenraaliarvonimen mistä tahansa

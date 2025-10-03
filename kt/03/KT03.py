@@ -65,11 +65,13 @@ print(f"Dieselauton vuotuiset matkakulut ovat {round(expenses_diesel, 2)} €.")
 
 if expenses_gas < expenses_diesel:
     print(
-        f"Bensiiniauton vuotuiset matkakulut ovat {round(expenses_diesel - expenses_gas, 2)} € halvemmat."
+        f"Bensiiniauton vuotuiset matkakulut ovat "
+        f"{round(expenses_diesel - expenses_gas, 2)} € halvemmat."
     )
 elif expenses_diesel < expenses_gas:
     print(
-        f"Dieselauton vuotuiset matkakulut ovat {round(expenses_gas - expenses_diesel, 2)} € halvemmat."
+        f"Dieselauton vuotuiset matkakulut ovat "
+        f"{round(expenses_gas - expenses_diesel, 2)} € halvemmat."
     )
 else:
     print("Molempien autojen vuotuiset matkakulut ovat yhtä suuret.")

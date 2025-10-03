@@ -105,11 +105,13 @@ if expenses_gas < expenses_diesel:
     # Huomaa, että formatointi toimii myös laskutoimituksissa, kun
     # laskutoimitus laitetaan sulkeisiin.
     print(
-        f"Bensiiniauton vuotuiset matkakulut ovat {(expenses_diesel - expenses_gas):.2f} € halvemmat."
+        f"Bensiiniauton vuotuiset matkakulut ovat "
+        f"{(expenses_diesel - expenses_gas):.2f} € halvemmat."
     )
 elif expenses_diesel < expenses_gas:
     print(
-        f"Dieselauton vuotuiset matkakulut ovat {(expenses_gas - expenses_diesel):.2f} € halvemmat."
+        f"Dieselauton vuotuiset matkakulut ovat "
+        f"{(expenses_gas - expenses_diesel):.2f} € halvemmat."
     )
 else:
     print("Molempien autojen vuotuiset matkakulut ovat yhtä suuret.")
