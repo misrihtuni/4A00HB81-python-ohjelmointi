@@ -6,6 +6,9 @@
 # Opiskelija: Rihu Miska
 # Päiväys: 2025-10-31
 #
+# Muokkaukset:
+# 2025-10-30: Lisää tarkistus kelvollisesta pizzanumerosta.
+#
 ###############################################################################
 # Tehtävänanto:
 #
@@ -44,6 +47,8 @@ from pizza_list import pizzas
 
 # Alustetaan loppusumma nollaksi.
 total = 0.0
+# Haetaan lista pizzanumeroista.
+valid_pizza_numbers = sorted(list(pizzas.keys()))
 
 print("Tervetuloa Guido's Pizza Palaceen, mitä haluaisitte?")
 
@@ -54,6 +59,11 @@ while True:
     # Poistutaan silmukasta, jos lopetusehto täyttyy.
     if pizza_number == 0:
         break
+
+    # Tarkistetaan, onko pizzanumero kelvollinen.
+    if pizza_number not in valid_pizza_numbers:
+        print("Virheellinen pizzan numero!")
+        continue
 
     pizza_count = int(input(f"Pizzan numero {pizza_number} kappalemäärä: "))
     # Haetaan pizza-sanakirja kaikkien pizzojen sanakirjasta.
