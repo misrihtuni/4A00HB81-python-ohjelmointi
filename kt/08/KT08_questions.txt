@@ -1,0 +1,17 @@
+Kuka seuraavista ei ole Monty Python -komediaryhmän jäsen?
+Michael Palin
+Terry Jones
+Charlie Chaplin
+c
+
+Kuka on Python-ohjelmointikielen alkuperäinen kehittäjä?
+Larry Wall
+Bjarne Stroustrup
+Guido van Rossum
+c
+
+Minkä alkuaineen kemiallinen merkki on Si?
+pii
+seleeni
+tina
+a
