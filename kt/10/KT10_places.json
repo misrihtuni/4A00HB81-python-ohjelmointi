@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sisäpiha",
+    "description": "TAMKin Teiskontien puoleinen sisäpiha."
+  },
+  {
+    "name": "Teiskontien aula",
+    "description": "TAMKin Teiskontien aula."
+  },
+  {
+    "name": "Palvelukatu",
+    "description": "Palvelukatu. Tämän käytävän varrella sijaitsevat opintopalvelut."
+  },
+  {
+    "name": "Tietotalon aula",
+    "description": "Aulatila, josta pääsee C-taloon ja juhlasaliin."
+  },
+  {
+    "name": "Juhlasali",
+    "description": "TAMKin juhlasali."
+  },
+  {
+    "name": "Kuntokadu aula",
+    "description": "Kuntokadun puoleinen eteisaula."
+  }
+]
