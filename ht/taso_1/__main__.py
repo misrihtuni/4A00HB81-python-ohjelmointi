@@ -40,7 +40,7 @@ INTRO_TEXT = (
     "Olet opiskelijana TAMKin pääkampuksella. "
     "Tehtävänäsi on löytää kadonneet esineet ja viedä ne takaisin "
     "paikalleen.\n\n"
-    "Peli toimii suomenkielesellä komentotulkilla, joka ymmärtää "
+    "Peli toimii suomenkielisellä komentotulkilla, joka ymmärtää "
     "yksi- ja kaksisanaisia komentoja muotoa 'verbi' 'objekti'. "
     "Komennot voit saada näkyviin milloin tahansa komennolla "
     "'apua'.\n\n"
