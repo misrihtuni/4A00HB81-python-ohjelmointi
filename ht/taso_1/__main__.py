@@ -334,6 +334,8 @@ CMD_DROP = "pudota"
 CMD_DRINK = "juo"
 CMD_PLACE = "aseta"
 
+# Lists of one- and two-word commands.
+# Used for differentiating help and prompting for invalid input.
 COMMANDS_1 = [CMD_QUIT, CMD_EXPLORE, CMD_INVENTORY, CMD_HELP]
 COMMANDS_2 = [CMD_INSPECT, CMD_GO, CMD_TAKE, CMD_DROP, CMD_DRINK, CMD_PLACE]
 
